@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="615.0" prefWidth="950.0" style="-fx-background-color: #BAD4F9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.windsor.controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="615.0" fitWidth="1162.0" layoutX="-1.0">
+         <image>
+            <Image url="@../icon/graphic-2d-colorful-wallpaper-with-grainy-gradients.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="61.0" layoutY="539.0" onAction="#btnExitOnAction" prefHeight="50.0" prefWidth="98.0" style="-fx-background-color: #962D0C;" text="         LogOut" textFill="#f4e8e8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="-2.0" layoutY="226.0" onAction="#btnCustomerOnAction" prefHeight="58.0" prefWidth="214.0" style="-fx-border-color: #0DB0D4;" text="      Customer">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="-1.0" layoutY="283.0" onAction="#btnPlaceOrderOnAction" prefHeight="58.0" prefWidth="214.0" style="-fx-border-color: #0DB0D4;" text="         placeOrder">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="-1.0" layoutY="169.0" onAction="#btnBooksOnAction" prefHeight="58.0" prefWidth="214.0" style="-fx-border-color: #0DB0D4;" text="Books">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="38.0" fitWidth="93.0" layoutX="18.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/place_order.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="99.0" layoutX="18.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/book.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="-1.0" layoutY="111.0" onAction="#btnDashBoardOnAction" prefHeight="58.0" prefWidth="214.0" style="-fx-border-color: #0DB0D4;" text="         Dashboard">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="root2" layoutX="213.0" prefHeight="615.0" prefWidth="950.0">
+         <children>
+            <ImageView fitHeight="615.0" fitWidth="950.0">
+               <image>
+                  <Image url="@../icon/3607424.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="39.0" layoutY="202.0" prefHeight="126.0" prefWidth="894.0" text="Welcome To WindsorBookshop">
+               <font>
+                  <Font size="59.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.5629629492759705" blue="0.5629629492759705" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.4951219512195121">
+                           <color>
+                              <Color red="0.6842105388641357" green="0.6842105388641357" blue="0.6842105388641357" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.10920000076293945" green="0.501634955406189" blue="0.7799999713897705" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Line endX="551.4000244140625" layoutX="300.0" layoutY="295.0" startX="-252.60000610351562" strokeWidth="4.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.5629629492759705" blue="0.5629629492759705" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.4951219512195121">
+                           <color>
+                              <Color red="0.6842105388641357" green="0.6842105388641357" blue="0.6842105388641357" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.10920000076293945" green="0.501634955406189" blue="0.7799999713897705" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke></Line>
+            <Label fx:id="lblProfile" layoutX="798.0" layoutY="28.0" prefHeight="38.0" prefWidth="135.0">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.10409356653690338" green="0.7564132809638977" blue="0.9368420839309692" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.46619999408721924" green="0.584476888179779" blue="0.6299999952316284" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="595.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true" />
+            <Line endX="10.60009765625" endY="3.814697265625E-6" layoutX="926.0" layoutY="60.0" startX="-84.0" startY="3.814697265625E-6" stroke="#425963" strokeWidth="2.0" />
+         </children>
+      </AnchorPane>
+      <Text layoutX="76.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Windsor" wrappingWidth="87.20000000000027">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.503787900462295" endY="0.6325757738315698">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8421052694320679" green="0.1497076004743576" blue="0.1497076004743576" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.11270955204963684" green="0.15507148206233978" blue="0.621052622795105" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Text layoutX="69.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bookshop" wrappingWidth="87.20000000000027">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.503787900462295" endY="0.6325757738315698">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8421052694320679" green="0.1497076004743576" blue="0.1497076004743576" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.10709551721811295" green="0.22672905027866364" blue="0.7052631378173828" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="18.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/dashboard_icon_182989.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="-1.0" layoutY="340.0" onAction="#btnAuthorOnAction" prefHeight="58.0" prefWidth="214.0" style="-fx-border-color: #0DB0D4;" text="  Author">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="47.0" fitWidth="38.0" layoutX="17.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/editor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="64.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/logout.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="22.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/people.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="-1.0" layoutY="398.0" onAction="#btnInventoryOnAction" prefHeight="58.0" prefWidth="214.0" style="-fx-border-color: #0DB0D4;" text="      Inventory">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="16.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/warehouse.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

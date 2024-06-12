@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="402.0" prefWidth="492.0" style="-fx-background-color: #BAD4F9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.windsor.controller.RegistrationFormController">
+   <children>
+      <ImageView fitHeight="412.0" fitWidth="492.0">
+         <image>
+            <Image url="@../icon/graphic-2d-colorful-wallpaper-with-grainy-gradients.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="159.0" layoutY="7.0" text="Registraion">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.800000011920929" green="0.17777778208255768" blue="0.17777778208255768" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.022534113377332687" green="0.35789474844932556" blue="0.24051852524280548" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="txtUserId" layoutX="235.0" layoutY="90.0" prefHeight="26.0" prefWidth="208.0" promptText="Input user Id" />
+      <TextField fx:id="txtName" layoutX="235.0" layoutY="142.0" prefHeight="26.0" prefWidth="208.0" promptText="Enter User Name" />
+      <TextField fx:id="txtPassword" layoutX="235.0" layoutY="202.0" prefHeight="26.0" prefWidth="208.0" promptText="Enter password" />
+      <Label layoutX="101.0" layoutY="93.0" text="userId">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="145.0" text="UserName">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="205.0" prefHeight="18.0" prefWidth="89.0" text="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="181.0" layoutY="286.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #3E7CD4;" text="    Register Now" />
+      <Line endX="100.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="243.0" layoutY="40.0" startX="-100.0" />
+      <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="190.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/enter.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

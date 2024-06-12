@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="615.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.windsor.controller.InventoryFormController">
+   <children>
+      <ImageView fitHeight="615.0" fitWidth="950.0">
+         <image>
+            <Image url="@../icon/graphic-2d-colorful-wallpaper-with-grainy-gradients.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="340.0" layoutY="8.0" prefHeight="51.0" prefWidth="358.0" text="Inventory Manage">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9157894849777222" green="0.08140350878238678" blue="0.08140350878238678" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.0623391829431057" green="0.27157506346702576" blue="0.43157893419265747" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="84.0" layoutY="140.0" prefHeight="24.0" prefWidth="22.0" text="ID :">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="81.0" layoutY="202.0" text="Quantity :">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="81.0" layoutY="267.0" prefHeight="18.0" prefWidth="65.0" text="Location :">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="79.0" layoutY="333.0" prefHeight="18.0" prefWidth="82.0" text="Book Code :">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <JFXComboBox fx:id="cmbBookCode" layoutX="180.0" layoutY="329.0" onAction="#cmbBookCodeOnAction" prefHeight="26.0" prefWidth="110.0" />
+      <Label layoutX="79.0" layoutY="392.0" prefHeight="18.0" prefWidth="82.0" text="Description :">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblDescription" layoutX="163.0" layoutY="388.0" prefHeight="26.0" prefWidth="182.0" textFill="#c42626">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtId" layoutX="169.0" layoutY="140.0" onAction="#txtSearchOnAction" onKeyReleased="#txtCodeOnKeyReleased" />
+      <TextField fx:id="txtQuantity" layoutX="169.0" layoutY="198.0" onKeyReleased="#txtQtyOnKeyReleased" />
+      <TextField fx:id="txtLocation" layoutX="169.0" layoutY="263.0" onKeyReleased="#txtLocationOnKeyReleased" />
+      <TableView fx:id="tblInventory" layoutX="396.0" layoutY="140.0" prefHeight="321.0" prefWidth="542.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="108.00006103515625" text="Inventory ID" />
+          <TableColumn fx:id="colQuantity" prefWidth="195.19989013671875" text="Quantity" />
+            <TableColumn fx:id="colLocation" prefWidth="122.4000244140625" text="Location" />
+            <TableColumn fx:id="colDescription" prefWidth="115.199951171875" text="Book ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="497.0" layoutY="524.0" mnemonicParsing="false" onAction="#btnSaveOnAction" style="-fx-background-color: #70C22C;" text="Save">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/diskette.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="815.0" layoutY="523.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" style="-fx-background-color: #C75446;" text="Delete">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/bin.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="706.0" layoutY="523.0" mnemonicParsing="false" onAction="#btnClearOnAction" style="-fx-background-color: #C66DF5;" text="Clear">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="598.0" layoutY="523.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" style="-fx-background-color: #D1C426;" text="Update">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/updated.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="43.0" layoutY="27.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #D91F62;" text="Back">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/undo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Line endX="235.60003662109375" endY="3.814697265625E-6" layoutX="374.0" layoutY="45.0" startX="-100.0" strokeWidth="3.0" />
+      <TextField fx:id="txtBookCode" layoutX="291.0" layoutY="329.0" prefHeight="26.0" prefWidth="98.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></TextField>
+      <Label layoutX="74.0" layoutY="453.0" prefHeight="24.0" prefWidth="87.0" text="Qty On Hand :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQtyOnHand" layoutX="169.0" layoutY="449.0" prefHeight="34.0" prefWidth="98.0" textFill="#e70e0e">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="53.0" layoutY="525.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="41.0" prefWidth="160.0" style="-fx-background-color: #EF7AE4;" text="        Print">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="34.0" fitWidth="87.0" layoutX="64.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/print.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

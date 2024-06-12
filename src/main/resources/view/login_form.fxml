@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="571.0" prefWidth="450.0" style="-fx-background-color: #BAD4F9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.windsor.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="570.0" fitWidth="460.0" layoutY="1.0">
+         <image>
+            <Image url="@../icon/graphic-2d-colorful-wallpaper-with-grainy-gradients.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="192.0" layoutY="55.0" prefHeight="36.0" prefWidth="98.0" text="Login ">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.48106057716138434" endY="0.7992424170176188" startX="0.39772728175827954" startY="0.6931818254066237">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.062300194054841995" green="0.2544366419315338" blue="0.35789474844932556" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.033840157091617584" green="0.07509291917085648" blue="0.6526315808296204" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="96.0" layoutY="173.0" prefHeight="26.0" prefWidth="85.0" text="User Name">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="96.0" layoutY="267.0" prefHeight="18.0" prefWidth="56.0" text="Password">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtUserId" layoutX="95.0" layoutY="193.0" prefHeight="26.0" prefWidth="280.0" promptText="user Name" />
+      <PasswordField fx:id="txtPassword" layoutX="95.0" layoutY="285.0" prefHeight="26.0" prefWidth="280.0" promptText="password" />
+      <Button layoutX="155.0" layoutY="384.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="36.0" prefWidth="146.0" style="-fx-background-color: #3E7CD4;" text="login">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Button>
+      <Hyperlink layoutX="241.0" layoutY="497.0" onAction="#linkRegistrationOnAction" text="Register Here">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Hyperlink>
+      <Label layoutX="98.0" layoutY="500.0" text="Don't have an Account ?" textFill="#d9c7c7">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Line endX="100.0" layoutX="224.0" layoutY="91.0" startX="-100.0" strokeWidth="3.0" />
+      <ImageView fitHeight="24.0" fitWidth="38.0" layoutX="166.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/login.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="142.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot password ? " />
+      <Hyperlink layoutX="239.0" layoutY="312.0" onAction="#linkForgetPasswordOnAction" text="Click Here" textFill="#a2c9ea">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

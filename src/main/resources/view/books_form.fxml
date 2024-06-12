@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="615.0" prefWidth="950.0" style="-fx-background-color: #BAD4F9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.windsor.controller.BooksFormController">
+   <children>
+      <ImageView fitHeight="615.0" fitWidth="950.0">
+         <image>
+            <Image url="@../icon/graphic-2d-colorful-wallpaper-with-grainy-gradients.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="380.0" layoutY="14.0" prefHeight="43.0" prefWidth="171.0" text="Book Manage">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7689393794897831" endY="0.7386363645394642" startX="0.5151515025081057" startY="0.20075754685835406">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.42384666204452515" green="0.5789473652839661" blue="0.3130604326725006" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.3444444537162781" blue="0.3444444537162781" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Label layoutX="82.0" layoutY="121.0" text="book Id :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="373.0" text="Qty On hand :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="204.0" text="unit price :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="288.0" text="Description:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCode" layoutX="82.0" layoutY="147.0" onAction="#txtCodeSearchOnAction" onKeyReleased="#txtCodeOnKeyReleased" />
+      <TextField fx:id="txtQtyOnHand" layoutX="83.0" layoutY="396.0" onKeyReleased="#txtQtyOnHandOnKeyReleased" />
+      <TextField fx:id="txtDescription" layoutX="83.0" layoutY="314.0" onKeyReleased="#txtDescriptionOnKeyReleased" />
+      <TextField fx:id="txtUnitPrice" layoutX="82.0" layoutY="229.0" onKeyReleased="#txtUnitPriceOnKeyReleased" />
+      <JFXButton layoutX="474.0" layoutY="537.0" onAction="#btnClearOnAction" prefHeight="43.0" prefWidth="86.0" style="-fx-background-color: #C66DF5;" text="clear">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/clear.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton layoutX="22.0" layoutY="18.0" onAction="#btnBackOnAction" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #D91F62;" text="Back">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/undo.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton layoutX="727.0" layoutY="537.0" onAction="#btnSaveOnAction" prefHeight="43.0" prefWidth="86.0" style="-fx-background-color: #70C22C;" text="Save">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/diskette.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton layoutX="601.0" layoutY="538.0" onAction="#btnUpdateOnAction" prefHeight="43.0" prefWidth="98.0" style="-fx-background-color: #D1C426;" text="Update">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/updated.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <TableView fx:id="tblItem" layoutX="380.0" layoutY="128.0" prefHeight="396.0" prefWidth="554.0" style="-fx-background-color: white;">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="94.39996337890625" text="id" />
+          <TableColumn fx:id="colDecription" prefWidth="188.8000030517578" text="Description(Name)" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="130.4000244140625" text="Unit Price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="138.39993896484373" text="QtyOnHand" />
+        </columns>
+      </TableView>
+      <Line endX="100.0" layoutX="447.0" layoutY="48.0" startX="-100.0" strokeWidth="3.0" />
+      <Button fx:id="btnDelete" layoutX="836.0" layoutY="538.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="43.0" prefWidth="98.0" style="-fx-background-color: #C75446;" text="Delete">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/bin.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

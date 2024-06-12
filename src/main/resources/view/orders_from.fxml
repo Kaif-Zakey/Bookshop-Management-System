@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="615.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.windsor.controller.OrdersFromController">
+   <children>
+      <ImageView fitHeight="615.0" fitWidth="950.0">
+         <image>
+            <Image url="@../icon/graphic-2d-colorful-wallpaper-with-grainy-gradients.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="275.0" prefHeight="78.0" prefWidth="439.0" text="            Orders Manage">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.257575764800563" startY="0.4545454184214274">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7894737124443054" green="0.21345029771327972" blue="0.21345029771327972" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.1594385951757431" green="0.07298245280981064" blue="0.5052631497383118" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TableView fx:id="tblBookorder" layoutX="404.0" layoutY="260.0" prefHeight="247.0" prefWidth="520.0">
+        <columns>
+          <TableColumn fx:id="colB_id" prefWidth="110.40008544921875" text="B_id" />
+            <TableColumn fx:id="colU_price" prefWidth="113.60003662109375" text="UnitPrice" />
+            <TableColumn fx:id="colQuantity" prefWidth="138.39996337890625" text="Quantity" />
+            <TableColumn fx:id="colO_id" prefWidth="160.0" text="O_id" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtid" layoutX="99.0" layoutY="152.0" />
+      <Text layoutX="23.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders id  :">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="817.0" layoutY="547.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="42.0" prefWidth="98.0" style="-fx-background-color: #C75446;" text="Delete">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/bin.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Line endX="140.20001220703125" endY="7.62939453125E-6" layoutX="459.0" layoutY="52.0" startX="-100.0" strokeWidth="3.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8526315689086914" green="0.15157894790172577" blue="0.15157894790172577" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.11150097101926804" green="0.4360363781452179" blue="0.6842105388641357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Button layoutX="273.0" layoutY="147.0" mnemonicParsing="false" onAction="#btnSearchOnAction" style="-fx-background-color: lightblue;" text="Search">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="38.0" layoutY="27.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #D91F62;" text="       Back" />
+      <ImageView fitHeight="34.0" fitWidth="42.0" layoutX="40.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/left-arrow.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="28.0" layoutY="233.0" prefHeight="26.0" prefWidth="34.0" text="C_id  :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblCid" layoutX="63.0" layoutY="234.0" prefHeight="26.0" prefWidth="98.0" textFill="#df4141">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="24.0" layoutY="297.0" prefHeight="26.0" prefWidth="42.0" text="Date  :">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblDate" layoutX="61.0" layoutY="298.0" prefHeight="26.0" prefWidth="150.0" textFill="#de4343">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="18.0" layoutY="356.0" prefHeight="26.0" prefWidth="42.0" text="B_id  :">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblb_id" layoutX="55.0" layoutY="357.0" prefHeight="26.0" prefWidth="150.0" textFill="#de4343">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="415.0" prefHeight="26.0" prefWidth="42.0" text="qty">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQty" layoutX="51.0" layoutY="416.0" prefHeight="26.0" prefWidth="150.0" textFill="#de4343">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
